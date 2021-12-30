@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: download git-client
+  
+      win_get_url:
+        url: 'https://github.com/msysgit/msysgit/releases/download/Git-1.9.5-preview20150319/Git-1.9.5-preview20150319.exe'
+        dest: 'C:\Windows\Temp\Git-1.9.5-preview20150319.exe'
+
+    - name: install git-client
+      raw: 'C:\Windows\Temp\Git-1.9.5-preview20150319.exe /SILENT /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"'
