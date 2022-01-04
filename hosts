@@ -1,0 +1,12 @@
+172.31.92.244
+[win]
+44.201.109.215
+
+[win:vars]
+ansible_user=Administrator
+ansible_password=Hello@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_port=5986
+
+
